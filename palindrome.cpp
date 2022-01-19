@@ -18,11 +18,9 @@ size_t longest_palindrome(string input)
 {
 	string longest = "";
 	for (int i = 0; i < input.length(); i++)
-	{ // 0, 1
+	{
 		for (int j = 1; j <= input.length() - i; j++)
-		{ // 2, 1
-			cout << "i: " << i << " "
-				 << "j: " << j << endl;
+		{
 			string test_str = input.substr(i, j);
 			if (is_palindrome(test_str))
 			{
